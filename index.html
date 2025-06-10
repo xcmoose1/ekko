@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekko - Facility Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">ekko</div>
+            <ul class="nav-links">
+                <li><a href="#services">Tjenester</a></li>
+                <li><a href="#tech">Teknologi</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services">Tjenester</a></li>
+            <li><a href="#tech">Teknologi</a></li>
+            <li><a href="#about">Om oss</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-background">
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+            <div class="gradient-sphere sphere-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word">Rent</span>
+                <span class="word">før</span>
+                <span class="word">du</span>
+                <span class="word">rekker</span>
+                <span class="word">tenke</span>
+                <span class="word">på</span>
+                <span class="word">det</span>
+            </h1>
+            <p class="hero-subtitle">Renhold og service som går av seg selv</p>
+            <a href="#contact" class="hero-cta">Start samtalen</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Philosophy -->
+        <section class="philosophy">
+            <div class="philosophy-content">
+                <p class="philosophy-text">
+                    Vi holder det <span class="highlight">enkelt</span>. 
+                    Vi holder det <span class="highlight">rent</span>. 
+                    Vi holder <span class="highlight">ord</span>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="services-header">
+                <h2 class="section-title">Våre tjenester</h2>
+                <p class="section-subtitle">Totalleverandør av fasiliteringstjenester til små og store bedrifter</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="renhold">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Renhold</h3>
+                    <p class="service-desc">Svanemerket renhold med fokus på kvalitet og miljø</p>
+                    
+                    <ul class="service-list">
+                        <li>Godkjent i Renholdsregisteret</li>
+                        <li>Miljøsertifisert med Svanemerket</li>
+                        <li>Skreddersydde renholdsplaner</li>
+                        <li>Fra kontor til industrirenhold</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('renhold')">Les mer →</button>
+                </div>
+
+                <div class="service-card" data-service="spesialist">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Spesialist</h3>
+                    <p class="service-desc">Spesialtilpasset renhold for krevende miljøer</p>
+                    
+                    <ul class="service-list">
+                        <li>Butikkrenhold og handelssentre</li>
+                        <li>Flyplasser, tog og transport</li>
+                        <li>Helsesektoren med strenge krav</li>
+                        <li>Produksjon og industrianlegg</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('spesialist')">Les mer →</button>
+                </div>
+
+                <div class="service-card" data-service="temporaere">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Temporære tjenester</h3>
+                    <p class="service-desc">Skalerbare løsninger tilpasset deres behov</p>
+                    
+                    <ul class="service-list">
+                        <li>Byggrenhold og etterarbeid</li>
+                        <li>Eventstøtte og arrangementer</li>
+                        <li>Sesongbaserte tjenester</li>
+                        <li>Vikarservice ved fravær</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('temporaere')">Les mer →</button>
+                </div>
+
+                <div class="service-card" data-service="matter">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Matter</h3>
+                    <p class="service-desc">Komplett matteservice for alle bransjer</p>
+                    
+                    <ul class="service-list">
+                        <li>Skittfangermatter og logomatter</li>
+                        <li>Ukentlig service og vedlikehold</li>
+                        <li>Spesialmatter for våtområder</li>
+                        <li>Ergonomiske arbeidsplassmatter</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('matter')">Les mer →</button>
+                </div>
+
+                <div class="service-card" data-service="forbruk">
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Forbruk</h3>
+                    <p class="service-desc">Smart forbruksvarehåndtering for bedrifter</p>
+                    
+                    <ul class="service-list">
+                        <li>Toalettpapir og tørkepapir</li>
+                        <li>Håndsåpe og desinfeksjon</li>
+                        <li>Kjøkkenrekvisita og avfallsposer</li>
+                        <li>Bestilling via nettportal</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('forbruk')">Les mer →</button>
+                </div>
+
+                <div class="service-card" data-service="baerekraft">
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">Bærekraft</h3>
+                    <p class="service-desc">Miljøansvar gjennom hele leveransen</p>
+                    
+                    <ul class="service-list">
+                        <li>Svanemerket renhold</li>
+                        <li>Kun miljømerkede produkter</li>
+                        <li>Avfallshåndtering og sortering</li>
+                        <li>Grønn profil for din bedrift</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="openServiceModal('baerekraft')">Les mer →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="tech" id="tech">
+            <div class="tech-container">
+                <div class="tech-content">
+                    <h2 class="section-title">Teknologi som faktisk funker</h2>
+                    <p class="tech-intro">Oversikt i sanntid. Ingen overraskelser. Alt samlet ett sted.</p>
+                    
+                    <div class="tech-features">
+                        <div class="tech-feature">
+                            <div class="feature-number">01</div>
+                            <h3>Sanntidsoppdateringer</h3>
+                            <p>Se hva som skjer, når det skjer</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="feature-number">02</div>
+                            <h3>Direkte kommunikasjon</h3>
+                            <p>Direkte kontakt med teamet</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="feature-number">03</div>
+                            <h3>Smart analyse</h3>
+                            <p>Data som gir mening</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <h3>Live Dashboard</h3>
+                        <div class="status-live">
+                            <span class="pulse"></span>
+                            Akkurat nå
+                        </div>
+                    </div>
+                    <div class="dashboard-stats">
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Kundetilfredshet</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">2.4t</div>
+                            <div class="stat-label">Responstid</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">142</div>
+                            <div class="stat-label">Aktive oppdrag</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-chart">
+                        <div class="chart-bar" style="height: 60%;"></div>
+                        <div class="chart-bar" style="height: 80%;"></div>
+                        <div class="chart-bar" style="height: 70%;"></div>
+                        <div class="chart-bar" style="height: 90%;"></div>
+                        <div class="chart-bar" style="height: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ekkoeffekten Section -->
+        <section class="ekkoeffekt" id="about">
+            <div class="ekko-container">
+                <div class="ekko-header">
+                    <h2 class="section-title">Ekkoeffekten</h2>
+                    <p class="ekko-intro">
+                        Når kvaliteten på renholdet matcher hastigheten det blir gjort med, 
+                        skjer det noe magisk. Vi kaller det Ekkoeffekten.
+                    </p>
+                </div>
+                
+                <div class="ekko-visual">
+                    <div class="sound-wave">
+                        <div class="wave-line" style="--delay: 0"></div>
+                        <div class="wave-line" style="--delay: 1"></div>
+                        <div class="wave-line" style="--delay: 2"></div>
+                        <div class="wave-line" style="--delay: 3"></div>
+                        <div class="wave-line" style="--delay: 4"></div>
+                    </div>
+                </div>
+                
+                <div class="ekko-grid">
+                    <div class="ekko-card">
+                        <div class="ekko-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="ekko-metric">Raskt</div>
+                        <h3 class="ekko-title">Vi kommer når vi skal</h3>
+                        <p class="ekko-desc">
+                            Ingen venting. Ingen forsinkelser. 
+                            Vi dukker opp akkurat når du forventer det.
+                        </p>
+                    </div>
+                    
+                    <div class="ekko-card">
+                        <div class="ekko-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="ekko-metric">Presist</div>
+                        <h3 class="ekko-title">Gjort riktig første gang</h3>
+                        <p class="ekko-desc">
+                            Grundige rutiner som fungerer. 
+                            Du slipper å tenke på det vi allerede har løst.
+                        </p>
+                    </div>
+                    
+                    <div class="ekko-card">
+                        <div class="ekko-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="ekko-metric">Enkelt</div>
+                        <h3 class="ekko-title">Mindre å tenke på</h3>
+                        <p class="ekko-desc">
+                            Vi tar ansvaret så du kan fokusere på det viktige. 
+                            En partner som alltid leverer.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="ekko-promise">
+                    <p class="promise-text">
+                        <span class="promise-highlight">Ekkoeffekten</span> handler ikke om magi. 
+                        Det handler om å gjøre det enkle eksepsjonelt bra, hver eneste gang.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2 class="contact-title">
+                        La oss ta<br>
+                        <span class="gradient-text">ansvaret</span>
+                    </h2>
+                    <p class="contact-subtitle">
+                        Du fokuserer på din virksomhet. Vi tar oss av resten.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <a href="tel:+4733308800" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-label">Ring oss</div>
+                                <div class="contact-value">33 30 88 00</div>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:post@ekko.no" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-label">Send e-post</div>
+                                <div class="contact-value">post@ekko.no</div>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-label">Besøk oss</div>
+                                <div class="contact-value">Fayes gate 4, Tønsberg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-visual">
+                    <div class="contact-shape">
+                        <div class="shape-inner">
+                            <div class="shape-text">Din<br>partner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">ekko</div>
+                <p>&copy; 2025 Ekko AS. Alle rettigheter.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Tønsberg</a>
+                <a href="#">Oslo</a>
+                <a href="#">Fredrikstad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

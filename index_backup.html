@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekko - Facility Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">ekko</div>
+            <ul class="nav-links">
+                <li><a href="#services">Tjenester</a></li>
+                <li><a href="#tech">Teknologi</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services">Tjenester</a></li>
+            <li><a href="#tech">Teknologi</a></li>
+            <li><a href="#about">Om oss</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-background">
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+            <div class="gradient-sphere sphere-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word">Service</span>
+                <span class="word">som</span>
+                <span class="word">gir</span>
+                <span class="word">gjenklang</span>
+            </h1>
+            <p class="hero-subtitle">Vi transformerer arbeidsplasser med menneskelig ekspertise og smart teknologi</p>
+            <a href="#contact" class="hero-cta">Start samtalen</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Philosophy -->
+        <section class="philosophy">
+            <div class="philosophy-content">
+                <p class="philosophy-text">
+                    Vi tror de beste løsningene er <span class="highlight">sømløse</span>. 
+                    At ekte kvalitet <span class="highlight">merkes</span>, ikke sees. 
+                    At tilliten bygges i <span class="highlight">det stille</span>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="services-header">
+                <h2 class="section-title">Våre tjenester</h2>
+                <p class="section-subtitle">Skreddersydde løsninger som møter virkeligheten din</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="renhold">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Renhold</h3>
+                    <p class="service-desc">Daglig drift som holder høyeste standard</p>
+                    
+                    <ul class="service-list">
+                        <li>Daglig kontorrenhold</li>
+                        <li>Periodisk hovedrengjøring</li>
+                        <li>Vinduspuss inne og ute</li>
+                        <li>Miljøsertifiserte metoder</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Profesjonelt renhold for moderne arbeidsplasser</h4>
+                            <p>Med over 15 års erfaring leverer vi renholdstjenester som går utover det vanlige. Vårt dedikerte team forstår at et rent arbeidsmiljø ikke bare handler om estetikk – det påvirker produktivitet, helse og bedriftens omdømme.</p>
+                            
+                            <h5>Våre metoder</h5>
+                            <p>Vi benytter de nyeste teknikkene innen profesjonelt renhold, kombinert med miljøvennlige produkter som er skånsomme mot både mennesker og natur. Våre ansatte gjennomgår kontinuerlig opplæring for å holde seg oppdatert på beste praksis.</p>
+                            
+                            <h5>Tilpasset deres behov</h5>
+                            <p>Hver bedrift er unik. Derfor starter vi alltid med en grundig behovsanalyse hvor vi kartlegger deres spesifikke krav til renhold. Dette danner grunnlaget for en skreddersydd renholdsplan som sikrer optimal ressursbruk og resultater.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-desc">kundetilfredshet</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-desc">tilgjengelighet</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">ISO</span>
+                                    <span class="stat-desc">sertifisert</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="spesialist">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Spesialist</h3>
+                    <p class="service-desc">Industri, helse og komplekse miljøer</p>
+                    
+                    <ul class="service-list">
+                        <li>Industrirenhold med sertifisert personell</li>
+                        <li>Helseinstitusjoner etter strenge standarder</li>
+                        <li>Renrom og laboratorier</li>
+                        <li>Hygienisk renhold for matindustri</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Spesialistkompetanse for krevende miljøer</h4>
+                            <p>Når ordinært renhold ikke er nok, stiller vi med spesialistkompetanse. Våre sertifiserte fagfolk har dyp forståelse for de strenge kravene som gjelder i industri, helsevesen og andre kritiske miljøer.</p>
+                            
+                            <h5>Sertifiseringer og kompetanse</h5>
+                            <p>Alle våre spesialister har gjennomgått omfattende opplæring og innehar relevante sertifiseringer inkludert ISO 9001, ISO 14001 og HACCP. Vi følger internasjonale standarder og beste praksis for hvert enkelt fagområde.</p>
+                            
+                            <h5>Teknologi og utstyr</h5>
+                            <p>Vi investerer kontinuerlig i det mest avanserte utstyret for spesialrenhold. Fra HEPA-filtrerte støvsugere til elektrostatiske desinfeksjonssystemer – vi har verktøyene som trengs for å møte selv de strengeste kravene.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-desc">sertifisert personell</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-desc">spesialområder</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-desc">kompromisser</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="temporaere">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Temporære tjenester</h3>
+                    <p class="service-desc">Fleksible løsninger når du trenger det</p>
+                    
+                    <ul class="service-list">
+                        <li>Ekstra bemanning ved arrangementer</li>
+                        <li>Sesongbasert renhold</li>
+                        <li>Prosjektbaserte oppdrag</li>
+                        <li>Flyttevask og klargjøring</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Fleksibilitet når behovet oppstår</h4>
+                            <p>Vi forstår at behovet for facility services ikke alltid følger en fast timeplan. Derfor tilbyr vi fleksible, temporære løsninger som kan skaleres opp eller ned etter deres behov – uten langsiktige forpliktelser.</p>
+                            
+                            <h5>Rask mobilisering</h5>
+                            <p>Med et stort nettverk av erfarne fagfolk kan vi raskt mobilisere ekstra ressurser. Enten det gjelder en stor konferanse, sesongvariasjoner eller uventede situasjoner, stiller vi opp med riktig kompetanse på kort varsel.</p>
+                            
+                            <h5>Kvalitet uten kompromiss</h5>
+                            <p>Selv om tjenesten er temporær, er kvaliteten permanent høy. Alt personell følger våre strenge kvalitetsstandarder og representerer Ekko på en profesjonell måte.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">2-4t</span>
+                                    <span class="stat-desc">responstid</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">500+</span>
+                                    <span class="stat-desc">fleksible ressurser</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-desc">skalerbart</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="matter">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Matter</h3>
+                    <p class="service-desc">Profesjonell levering og vedlikehold</p>
+                    
+                    <ul class="service-list">
+                        <li>Leie av høykvalitetsmatter</li>
+                        <li>Regelmessig utskifting og vask</li>
+                        <li>Logomatter med deres design</li>
+                        <li>Antistatiske matter for industri</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Førsteinntrykket starter ved døren</h4>
+                            <p>Profesjonelle matter er mer enn bare et praktisk element – de er en del av deres merkevarebygging og bidrar til et trygt, rent arbeidsmiljø. Vårt omfattende mattekonsept sikrer at dere alltid har rene, funksjonelle matter.</p>
+                            
+                            <h5>Komplett matteservice</h5>
+                            <p>Vi tar hånd om hele prosessen: valg av riktig matte for deres behov, regelmessig utskifting, profesjonell vask og vedlikehold. Dere slipper å tenke på matter – vi sørger for at de alltid er på plass og i perfekt stand.</p>
+                            
+                            <h5>Design og funksjonalitet</h5>
+                            <p>Fra elegante logomatter som forsterker deres merkevare til høyteknologiske antistatiske matter for sensitive miljøer – vi har løsninger for alle behov. Alle våre matter oppfyller strenge kvalitets- og sikkerhetsstandarder.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">14</span>
+                                    <span class="stat-desc">dagers byttefrekvens</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">85%</span>
+                                    <span class="stat-desc">reduksjon i smuss</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">∞</span>
+                                    <span class="stat-desc">designmuligheter</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="forbruk">
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Forbruk</h3>
+                    <p class="service-desc">Automatisk påfyll, aldri tomt</p>
+                    
+                    <ul class="service-list">
+                        <li>Automatisk påfyll av hygieneartikler</li>
+                        <li>Papir, såpe og desinfeksjon</li>
+                        <li>Digital lagerstyring</li>
+                        <li>Månedlig rapportering</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Smart forbruksstyring for moderne virksomheter</h4>
+                            <p>Slipp bekymringen for tomme dispensere og manglende forbruksvarer. Vår digitale løsning overvåker forbruket i sanntid og sørger for automatisk påfyll før lagrene går tomme.</p>
+                            
+                            <h5>Prediktiv teknologi</h5>
+                            <p>Ved hjelp av IoT-sensorer og prediktive algoritmer lærer systemet deres forbruksmønstre. Dette gjør at vi kan optimalisere leveranser, redusere svinn og sikre at dere aldri går tom for essensielle varer.</p>
+                            
+                            <h5>Full oversikt og kontroll</h5>
+                            <p>Gjennom vår digitale plattform har dere full oversikt over forbruk, kostnader og miljøpåvirkning. Månedlige rapporter gir innsikt som hjelper dere å ta smartere beslutninger og redusere kostnader.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">30%</span>
+                                    <span class="stat-desc">kostnadsreduksjon</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">0</span>
+                                    <span class="stat-desc">tomme dispensere</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-desc">digital oversikt</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="baerekraft">
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">Bærekraft</h3>
+                    <p class="service-desc">Grønn drift som gir mening</p>
+                    
+                    <ul class="service-list">
+                        <li>Miljøsertifiserte produkter</li>
+                        <li>Redusert kjemikaliebruk</li>
+                        <li>CO2-nøytrale transportløsninger</li>
+                        <li>Månedlig miljørapport</li>
+                    </ul>
+                    
+                    <button class="service-link" onclick="toggleServiceDetails(this)">Les mer →</button>
+                    
+                    <div class="service-details">
+                        <div class="details-content">
+                            <h4>Bærekraftig drift for fremtidens arbeidsplasser</h4>
+                            <p>Miljøansvar er ikke lenger valgfritt – det er en nødvendighet. Vi hjelper dere med å redusere miljøavtrykket gjennom innovative, grønne løsninger som også gir økonomisk mening.</p>
+                            
+                            <h5>Vitenskapsbasert tilnærming</h5>
+                            <p>Alle våre miljøtiltak er basert på solid forskning og målbare resultater. Fra mikrofiber-teknologi som reduserer vannforbruk til enzymatiske rengjøringsmidler som bryter ned smuss naturlig – hver løsning er nøye utvalgt for maksimal effekt.</p>
+                            
+                            <h5>Transparens og dokumentasjon</h5>
+                            <p>Med detaljerte miljørapporter kan dere følge deres fremgang mot bærekraftsmålene. Vi dokumenterer alt fra CO2-besparelser til reduksjon i kjemikaliebruk, slik at dere kan kommunisere deres miljøinnsats med troverdighet.</p>
+                            
+                            <div class="details-stats">
+                                <div class="detail-stat">
+                                    <span class="stat-number">75%</span>
+                                    <span class="stat-desc">mindre kjemikalier</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">60%</span>
+                                    <span class="stat-desc">redusert CO2</span>
+                                </div>
+                                <div class="detail-stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-desc">sporbart</span>
+                                </div>
+                            </div>
+                            
+                            <button class="close-details" onclick="toggleServiceDetails(this.closest('.service-card').querySelector('.service-link'))">Lukk ×</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="tech" id="tech">
+            <div class="tech-container">
+                <div class="tech-content">
+                    <h2 class="section-title">Digital transparens</h2>
+                    <p class="tech-intro">Cerum+ setter en ny standard for hvordan facility services kommuniseres. Alt på ett sted.</p>
+                    
+                    <div class="tech-features">
+                        <div class="tech-feature">
+                            <div class="feature-number">01</div>
+                            <h3>Sanntidsoppdateringer</h3>
+                            <p>Se hva som skjer, når det skjer</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="feature-number">02</div>
+                            <h3>Direkte kommunikasjon</h3>
+                            <p>Direkte kontakt med teamet</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="feature-number">03</div>
+                            <h3>Smart analyse</h3>
+                            <p>Data som gir mening</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <h3>Cerum+ Dashboard</h3>
+                        <div class="status-live">
+                            <span class="pulse"></span>
+                            Live
+                        </div>
+                    </div>
+                    <div class="dashboard-stats">
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Kundetilfredshet</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">2.4t</div>
+                            <div class="stat-label">Responstid</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">142</div>
+                            <div class="stat-label">Aktive oppdrag</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-chart">
+                        <div class="chart-bar" style="height: 60%;"></div>
+                        <div class="chart-bar" style="height: 80%;"></div>
+                        <div class="chart-bar" style="height: 70%;"></div>
+                        <div class="chart-bar" style="height: 90%;"></div>
+                        <div class="chart-bar" style="height: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="section-title">Ekkoeffekten</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-number">43+</div>
+                        <p class="about-text">Eksperter som bryr seg</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-number">15</div>
+                        <p class="about-text">År med erfaring</p>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-number">24/7</div>
+                        <p class="about-text">Alltid tilgjengelig</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2 class="contact-title">
+                        La oss<br>
+                        <span class="gradient-text">skape noe</span><br>
+                        sammen
+                    </h2>
+                    <p class="contact-subtitle">
+                        Hver stor endring starter med en enkel samtale. Vi er klare når du er det.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <a href="tel:+4733308800" class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <div class="contact-label">Ring oss</div>
+                                <div class="contact-value">33 30 88 00</div>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:post@ekko.no" class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <div class="contact-label">Send e-post</div>
+                                <div class="contact-value">post@ekko.no</div>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <div class="contact-label">Besøk oss</div>
+                                <div class="contact-value">Fayes gate 4, Tønsberg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-visual">
+                    <div class="contact-shape">
+                        <div class="shape-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">ekko</div>
+                <p>&copy; 2025 Ekko AS. Alle rettigheter.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Tønsberg</a>
+                <a href="#">Oslo</a>
+                <a href="#">Fredrikstad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
