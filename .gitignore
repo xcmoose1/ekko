@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*_backup.*
+*.bak
+
+# Test files
+test.html
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg
+
+# Logs
+*.log
