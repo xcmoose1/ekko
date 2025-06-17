@@ -1,0 +1,30 @@
+INSTRUCTIONS TO PUSH YOUR CODE TO GITHUB
+
+Your repository is fully prepared and ready to push. You have two commits:
+1. Initial commit with all website files
+2. Documentation commit with README and .gitignore
+
+To push to GitHub, run ONE of these commands in your terminal:
+
+OPTION 1 - Using GitHub Personal Access Token:
+1. Go to GitHub Settings > Developer settings > Personal access tokens
+2. Generate a new token with 'repo' permissions
+3. Run: git push https://YOUR_TOKEN@github.com/xcmoose1/ekko.git main
+
+OPTION 2 - Using SSH (if you have SSH keys set up):
+1. Run: git remote set-url origin git@github.com:xcmoose1/ekko.git
+2. Run: git push -u origin main
+
+OPTION 3 - Using GitHub Desktop:
+1. Open GitHub Desktop
+2. Add existing repository from /mnt/c/Users/alexa/Desktop/Ekko
+3. Click "Publish repository"
+
+OPTION 4 - Using standard HTTPS (will prompt for username/password):
+1. Run: git push -u origin main
+2. Enter your GitHub username when prompted
+3. Enter your GitHub personal access token as the password
+
+Your repository URL: https://github.com/xcmoose1/ekko.git
+
+All files are committed and ready - you just need to authenticate and push!

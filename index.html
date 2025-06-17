@@ -13,10 +13,10 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">ekko</div>
+            <div class="logo">ekko.</div>
             <ul class="nav-links">
                 <li><a href="#services">Tjenester</a></li>
-                <li><a href="#tech">Teknologi</a></li>
+                <li><a href="#tech">Kundeportal</a></li>
                 <li><a href="#about">Om oss</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
@@ -32,7 +32,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <ul>
             <li><a href="#services">Tjenester</a></li>
-            <li><a href="#tech">Teknologi</a></li>
+            <li><a href="#tech">Kundeportal</a></li>
             <li><a href="#about">Om oss</a></li>
             <li><a href="#contact">Kontakt</a></li>
         </ul>
@@ -70,11 +70,15 @@
         <!-- Philosophy -->
         <section class="philosophy">
             <div class="philosophy-content">
-                <p class="philosophy-text">
-                    Vi holder det <span class="highlight">enkelt</span>. 
-                    Vi holder det <span class="highlight">rent</span>. 
-                    Vi holder <span class="highlight">ord</span>.
-                </p>
+                <div class="philosophy-statement">
+                    <span class="philosophy-line"></span>
+                    <p class="philosophy-text">
+                        Vi holder det <span class="highlight">enkelt</span>. 
+                        Vi holder det <span class="highlight">rent</span>. 
+                        Vi holder <span class="highlight">ord</span>.
+                    </p>
+                    <span class="philosophy-line"></span>
+                </div>
             </div>
         </section>
 
@@ -85,94 +89,112 @@
                 <p class="section-subtitle">Totalleverandør av fasiliteringstjenester til små og store bedrifter</p>
             </div>
             <div class="services-grid">
-                <div class="service-card" data-service="renhold">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">Renhold</h3>
-                    <p class="service-desc">Svanemerket renhold med fokus på kvalitet og miljø</p>
+                <div class="service-card" data-service="renhold" data-index="01">
+                    <div class="service-header">
+                        <span class="service-index">[01]</span>
+                        <h3 class="service-title">RENHOLD</h3>
+                    </div>
+                    <p class="service-desc">Profesjonelt svanemerket renhold med høyeste kvalitetsstandarder og miljøfokus for alle typer næringseiendom.</p>
                     
-                    <ul class="service-list">
-                        <li>Godkjent i Renholdsregisteret</li>
-                        <li>Miljøsertifisert med Svanemerket</li>
-                        <li>Skreddersydde renholdsplaner</li>
-                        <li>Fra kontor til industrirenhold</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('renhold')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Godkjent i Renholdsregisteret - full transparens og trygghet</div>
+                        <div class="detail-item">Miljøsertifisert med Svanemerket siden 2018</div>
+                        <div class="detail-item">Skreddersydde renholdsplaner tilpasset deres behov</div>
+                        <div class="detail-item">Fra små kontorer til store industrianlegg</div>
+                        <div class="detail-item">Faste team som kjenner deres lokaler</div>
+                        <div class="detail-item">Digital kvalitetskontroll og rapportering</div>
+                        <div class="detail-item">Tilgjengelig for akutte situasjoner</div>
+                    </div>
                 </div>
 
-                <div class="service-card" data-service="spesialist">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Spesialist</h3>
-                    <p class="service-desc">Spesialtilpasset renhold for krevende miljøer</p>
+                <div class="service-card" data-service="spesialist" data-index="02">
+                    <div class="service-header">
+                        <span class="service-index">[02]</span>
+                        <h3 class="service-title">SPESIALIST</h3>
+                    </div>
+                    <p class="service-desc">Ekspertise innen spesialisert renhold for bransjer med høye krav til hygiene, sikkerhet og spesifikke standarder.</p>
                     
-                    <ul class="service-list">
-                        <li>Butikkrenhold og handelssentre</li>
-                        <li>Flyplasser, tog og transport</li>
-                        <li>Helsesektoren med strenge krav</li>
-                        <li>Produksjon og industrianlegg</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('spesialist')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Butikkrenhold med fokus på kundeopplevelse</div>
+                        <div class="detail-item">Flyplasser og transportknutepunkt - fleksibel drift</div>
+                        <div class="detail-item">Helseinstitusjoner med infeksjonskontroll</div>
+                        <div class="detail-item">Rene rom og laboratorier med spesialkrav</div>
+                        <div class="detail-item">Næringsmiddelindustri med HACCP-standarder</div>
+                        <div class="detail-item">Hotell og overnatting med høy standard</div>
+                        <div class="detail-item">Sertifisert personell for spesialoppgaver</div>
+                    </div>
                 </div>
 
-                <div class="service-card" data-service="temporaere">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Temporære tjenester</h3>
-                    <p class="service-desc">Skalerbare løsninger tilpasset deres behov</p>
+                <div class="service-card" data-service="temporaere" data-index="03">
+                    <div class="service-header">
+                        <span class="service-index">[03]</span>
+                        <h3 class="service-title">TEMPORÆRE TJENESTER</h3>
+                    </div>
+                    <p class="service-desc">Fleksible renholdsløsninger som dekker kortvarige behov, sesongvariasjoner og uforutsette situasjoner.</p>
                     
-                    <ul class="service-list">
-                        <li>Byggrenhold og etterarbeid</li>
-                        <li>Eventstøtte og arrangementer</li>
-                        <li>Sesongbaserte tjenester</li>
-                        <li>Vikarservice ved fravær</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('temporaere')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Byggrenhold under og etter konstruksjon</div>
+                        <div class="detail-item">Grovrenhold og klargjøring før innflytting</div>
+                        <div class="detail-item">Eventstøtte før, under og etter arrangementer</div>
+                        <div class="detail-item">Messer, konferanser og store samlinger</div>
+                        <div class="detail-item">Sesongrenhold - vår og høst</div>
+                        <div class="detail-item">Vikarservice ved sykdom eller fravær</div>
+                        <div class="detail-item">Tilgjengelig på kort varsel - vanligvis innen 1-2 dager</div>
+                    </div>
                 </div>
 
-                <div class="service-card" data-service="matter">
-                    <div class="service-number">04</div>
-                    <h3 class="service-title">Matter</h3>
-                    <p class="service-desc">Komplett matteservice for alle bransjer</p>
+                <div class="service-card" data-service="matter" data-index="04">
+                    <div class="service-header">
+                        <span class="service-index">[04]</span>
+                        <h3 class="service-title">MATTER</h3>
+                    </div>
+                    <p class="service-desc">Helhetlig matteservice som reduserer skitt, øker sikkerhet og forbedrer førsteinntrykket av deres lokaler.</p>
                     
-                    <ul class="service-list">
-                        <li>Skittfangermatter og logomatter</li>
-                        <li>Ukentlig service og vedlikehold</li>
-                        <li>Spesialmatter for våtområder</li>
-                        <li>Ergonomiske arbeidsplassmatter</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('matter')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Skittfangermatter som stopper 80% av smusset</div>
+                        <div class="detail-item">Logomatter som forsterker deres merkevare</div>
+                        <div class="detail-item">Fast ukentlig utskifting og vask</div>
+                        <div class="detail-item">Spesialmatter for kjøkken og våtsoner</div>
+                        <div class="detail-item">Anti-trøtthetsmatter for arbeidsstasjoner</div>
+                        <div class="detail-item">Sklisikre matter for økt sikkerhet</div>
+                        <div class="detail-item">Miljøvennlig vask og gjenbruk</div>
+                    </div>
                 </div>
 
-                <div class="service-card" data-service="forbruk">
-                    <div class="service-number">05</div>
-                    <h3 class="service-title">Forbruk</h3>
-                    <p class="service-desc">Smart forbruksvarehåndtering for bedrifter</p>
+                <div class="service-card" data-service="forbruk" data-index="05">
+                    <div class="service-header">
+                        <span class="service-index">[05]</span>
+                        <h3 class="service-title">FORBRUK</h3>
+                    </div>
+                    <p class="service-desc">Effektiv leveranse og håndtering av alle forbruksvarer, så dere aldri går tom for essensielle produkter.</p>
                     
-                    <ul class="service-list">
-                        <li>Toalettpapir og tørkepapir</li>
-                        <li>Håndsåpe og desinfeksjon</li>
-                        <li>Kjøkkenrekvisita og avfallsposer</li>
-                        <li>Bestilling via nettportal</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('forbruk')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Komplett sortiment av hygienepapir</div>
+                        <div class="detail-item">Håndsåpe, desinfeksjon og håndkrem</div>
+                        <div class="detail-item">Dispensere tilpasset deres behov</div>
+                        <div class="detail-item">Kjøkkenrekvisita for pauserom</div>
+                        <div class="detail-item">Avfallsposer i alle størrelser</div>
+                        <div class="detail-item">Automatisk påfylling - aldri tomt lager</div>
+                        <div class="detail-item">Digital bestillingsportal med oversikt</div>
+                    </div>
                 </div>
 
-                <div class="service-card" data-service="baerekraft">
-                    <div class="service-number">06</div>
-                    <h3 class="service-title">Bærekraft</h3>
-                    <p class="service-desc">Miljøansvar gjennom hele leveransen</p>
+                <div class="service-card" data-service="baerekraft" data-index="06">
+                    <div class="service-header">
+                        <span class="service-index">[06]</span>
+                        <h3 class="service-title">BÆREKRAFT</h3>
+                    </div>
+                    <p class="service-desc">Forpliktelse til miljøet gjennom hver eneste tjeneste, produkt og prosess - for en grønnere fremtid.</p>
                     
-                    <ul class="service-list">
-                        <li>Svanemerket renhold</li>
-                        <li>Kun miljømerkede produkter</li>
-                        <li>Avfallshåndtering og sortering</li>
-                        <li>Grønn profil for din bedrift</li>
-                    </ul>
-                    
-                    <button class="service-link" onclick="openServiceModal('baerekraft')">Les mer →</button>
+                    <div class="service-details">
+                        <div class="detail-item">Svanemerket siden 2018 - høyeste miljøstandard</div>
+                        <div class="detail-item">100% miljømerkede renholdsprodukter</div>
+                        <div class="detail-item">Optimalisert kjøreruter reduserer CO2-utslipp</div>
+                        <div class="detail-item">Profesjonell avfallssortering og gjenvinning</div>
+                        <div class="detail-item">Opplæring i miljøvennlig drift for ansatte</div>
+                        <div class="detail-item">Månedlig miljørapport til våre kunder</div>
+                        <div class="detail-item">Bidrar til deres bærekraftsmål</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -181,60 +203,92 @@
         <section class="tech" id="tech">
             <div class="tech-container">
                 <div class="tech-content">
-                    <h2 class="section-title">Teknologi som faktisk funker</h2>
-                    <p class="tech-intro">Oversikt i sanntid. Ingen overraskelser. Alt samlet ett sted.</p>
+                    <h2 class="section-title">System som faktisk funker</h2>
+                    <p class="tech-intro">Full oversikt og direkte kommunikasjon. Se hvem som gjør hva, når - og snakk direkte med teamet.</p>
                     
                     <div class="tech-features">
                         <div class="tech-feature">
-                            <div class="feature-number">01</div>
-                            <h3>Sanntidsoppdateringer</h3>
-                            <p>Se hva som skjer, når det skjer</p>
+                            <span class="feature-index">[01]</span>
+                            <h3>SPORING I SANNTID</h3>
+                            <p>Kunden kan se når de er ferdig, samt besøkelseslogg fra tidligere og planlagte besøk</p>
+                            <div class="feature-line"></div>
                         </div>
                         <div class="tech-feature">
-                            <div class="feature-number">02</div>
-                            <h3>Direkte kommunikasjon</h3>
-                            <p>Direkte kontakt med teamet</p>
+                            <span class="feature-index">[02]</span>
+                            <h3>DIREKTE MELDINGER</h3>
+                            <p>Kommuniser direkte med våre team via innebygd meldingsfunksjon</p>
+                            <div class="feature-line"></div>
                         </div>
                         <div class="tech-feature">
-                            <div class="feature-number">03</div>
-                            <h3>Smart analyse</h3>
-                            <p>Data som gir mening</p>
+                            <span class="feature-index">[03]</span>
+                            <h3>YTELSESRAPPORTER</h3>
+                            <p>Detaljert informasjon om utførelsen av tjenesten med full historikk</p>
+                            <div class="feature-line"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="dashboard-preview">
-                    <div class="dashboard-header">
-                        <h3>Live Dashboard</h3>
-                        <div class="status-live">
-                            <span class="pulse"></span>
-                            Akkurat nå
+                    <div class="dashboard-frame">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                        
+                        <div class="dashboard-header">
+                            <span class="dashboard-title">DIGITAL RENHOLDSOVERSIKT</span>
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">OPPDATERT</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dashboard-stats">
-                        <div class="stat">
-                            <div class="stat-value">98%</div>
-                            <div class="stat-label">Kundetilfredshet</div>
+                        
+                        <div class="dashboard-content">
+                            <div class="dashboard-tabs">
+                                <div class="tab active">Oppgaver</div>
+                                <div class="tab">Meldinger</div>
+                                <div class="tab">Ytelse</div>
+                            </div>
+                            
+                            <div class="status-row">
+                                <div class="status-item">
+                                    <span class="status-indicator done"></span>
+                                    <div class="status-details">
+                                        <span class="status-text">Fayes gate 4 - Morgenrenhold</span>
+                                        <span class="status-info">Utført av: Team A | Kl. 08:30</span>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-indicator active"></span>
+                                    <div class="status-details">
+                                        <span class="status-text">Storgata 15 - Kontorrenhold</span>
+                                        <span class="status-info">Pågår: Team B | Startet 14:15</span>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-indicator pending"></span>
+                                    <div class="status-details">
+                                        <span class="status-text">Hovedgata 3 - Daglig renhold</span>
+                                        <span class="status-info">Planlagt: Team C | I morgen 07:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chat-preview">
+                                <div class="chat-header">Direktemeldinger</div>
+                                <div class="chat-message">
+                                    <span class="chat-author">Team A:</span>
+                                    <span class="chat-text">Ferdig med Fayes gate. Alt OK.</span>
+                                    <span class="chat-time">08:35</span>
+                                </div>
+                                <div class="chat-message">
+                                    <span class="chat-author">Kunde:</span>
+                                    <span class="chat-text">Takk for rask respons!</span>
+                                    <span class="chat-time">08:42</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <div class="stat-value">24/7</div>
-                            <div class="stat-label">Support</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">2.4t</div>
-                            <div class="stat-label">Responstid</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">142</div>
-                            <div class="stat-label">Aktive oppdrag</div>
-                        </div>
-                    </div>
-                    <div class="dashboard-chart">
-                        <div class="chart-bar" style="height: 60%;"></div>
-                        <div class="chart-bar" style="height: 80%;"></div>
-                        <div class="chart-bar" style="height: 70%;"></div>
-                        <div class="chart-bar" style="height: 90%;"></div>
-                        <div class="chart-bar" style="height: 85%;"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -251,72 +305,47 @@
                     </p>
                 </div>
                 
-                <div class="ekko-visual">
-                    <div class="sound-wave">
-                        <div class="wave-line" style="--delay: 0"></div>
-                        <div class="wave-line" style="--delay: 1"></div>
-                        <div class="wave-line" style="--delay: 2"></div>
-                        <div class="wave-line" style="--delay: 3"></div>
-                        <div class="wave-line" style="--delay: 4"></div>
-                    </div>
-                </div>
-                
                 <div class="ekko-grid">
-                    <div class="ekko-card">
-                        <div class="ekko-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <div class="ekko-card" data-index="01">
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <div class="ekko-metric">RASKT</div>
+                            <h3 class="ekko-title">Vi kommer når vi skal</h3>
+                            <p class="ekko-desc">
+                                Ingen venting. Ingen forsinkelser. 
+                                Vi dukker opp akkurat når du forventer det.
+                            </p>
+                            <div class="card-indicator"></div>
                         </div>
-                        <div class="ekko-metric">Raskt</div>
-                        <h3 class="ekko-title">Vi kommer når vi skal</h3>
-                        <p class="ekko-desc">
-                            Ingen venting. Ingen forsinkelser. 
-                            Vi dukker opp akkurat når du forventer det.
-                        </p>
                     </div>
                     
-                    <div class="ekko-card">
-                        <div class="ekko-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="12" r="3" fill="currentColor"/>
-                                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
-                                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
-                                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
-                                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+                    <div class="ekko-card" data-index="02">
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <div class="ekko-metric">PRESIST</div>
+                            <h3 class="ekko-title">Gjort riktig første gang</h3>
+                            <p class="ekko-desc">
+                                Grundige rutiner som fungerer. 
+                                Du slipper å tenke på det vi allerede har løst.
+                            </p>
+                            <div class="card-indicator"></div>
                         </div>
-                        <div class="ekko-metric">Presist</div>
-                        <h3 class="ekko-title">Gjort riktig første gang</h3>
-                        <p class="ekko-desc">
-                            Grundige rutiner som fungerer. 
-                            Du slipper å tenke på det vi allerede har løst.
-                        </p>
                     </div>
                     
-                    <div class="ekko-card">
-                        <div class="ekko-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
+                    <div class="ekko-card" data-index="03">
+                        <div class="card-border"></div>
+                        <div class="card-content">
+                            <div class="ekko-metric">ENKELT</div>
+                            <h3 class="ekko-title">Mindre å tenke på</h3>
+                            <p class="ekko-desc">
+                                Vi tar ansvaret så du kan fokusere på det viktige. 
+                                En partner som alltid leverer.
+                            </p>
+                            <div class="card-indicator"></div>
                         </div>
-                        <div class="ekko-metric">Enkelt</div>
-                        <h3 class="ekko-title">Mindre å tenke på</h3>
-                        <p class="ekko-desc">
-                            Vi tar ansvaret så du kan fokusere på det viktige. 
-                            En partner som alltid leverer.
-                        </p>
                     </div>
                 </div>
                 
-                <div class="ekko-promise">
-                    <p class="promise-text">
-                        <span class="promise-highlight">Ekkoeffekten</span> handler ikke om magi. 
-                        Det handler om å gjøre det enkle eksepsjonelt bra, hver eneste gang.
-                    </p>
-                </div>
             </div>
         </section>
 
@@ -325,59 +354,44 @@
             <div class="contact-container">
                 <div class="contact-content">
                     <h2 class="contact-title">
-                        La oss ta<br>
-                        <span class="gradient-text">ansvaret</span>
+                        <span class="contact-simple">Ta kontakt</span>
                     </h2>
                     <p class="contact-subtitle">
-                        Du fokuserer på din virksomhet. Vi tar oss av resten.
+                        Vi hjelper deg gjerne med dine renholdsbehov.
                     </p>
                     
-                    <div class="contact-info">
-                        <a href="tel:+4733308800" class="contact-item">
-                            <div class="contact-icon">
+                    <div class="contact-email-wrapper">
+                        <a href="mailto:post@ekko.no" class="contact-email-button">
+                            <span class="email-text">post@ekko.no</span>
+                            <div class="email-arrow">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </div>
-                            <div>
-                                <div class="contact-label">Ring oss</div>
-                                <div class="contact-value">33 30 88 00</div>
                             </div>
                         </a>
-                        
-                        <a href="mailto:post@ekko.no" class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="contact-label">Send e-post</div>
-                                <div class="contact-value">post@ekko.no</div>
-                            </div>
-                        </a>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="contact-label">Besøk oss</div>
-                                <div class="contact-value">Fayes gate 4, Tønsberg</div>
-                            </div>
-                        </div>
+                        <div class="email-glow"></div>
                     </div>
+                    
+                    <p class="contact-tagline">Svar innen 1-2 arbeidsdager</p>
                 </div>
                 
                 <div class="contact-visual">
-                    <div class="contact-shape">
-                        <div class="shape-inner">
-                            <div class="shape-text">Din<br>partner</div>
-                        </div>
+                    <div class="geometric-grid">
+                        <div class="grid-line horizontal" style="--index: 1"></div>
+                        <div class="grid-line horizontal" style="--index: 2"></div>
+                        <div class="grid-line horizontal" style="--index: 3"></div>
+                        <div class="grid-line vertical" style="--index: 1"></div>
+                        <div class="grid-line vertical" style="--index: 2"></div>
+                        <div class="grid-line vertical" style="--index: 3"></div>
+                        <div class="grid-node" style="--x: 1; --y: 1"></div>
+                        <div class="grid-node" style="--x: 2; --y: 1"></div>
+                        <div class="grid-node" style="--x: 3; --y: 1"></div>
+                        <div class="grid-node" style="--x: 1; --y: 2"></div>
+                        <div class="grid-node" style="--x: 2; --y: 2"></div>
+                        <div class="grid-node" style="--x: 3; --y: 2"></div>
+                        <div class="grid-node" style="--x: 1; --y: 3"></div>
+                        <div class="grid-node" style="--x: 2; --y: 3"></div>
+                        <div class="grid-node" style="--x: 3; --y: 3"></div>
                     </div>
                 </div>
             </div>
@@ -388,7 +402,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">ekko</div>
+                <div class="logo">ekko.</div>
                 <p>&copy; 2025 Ekko AS. Alle rettigheter.</p>
             </div>
             <div class="footer-links">

@@ -215,11 +215,17 @@ document.head.appendChild(style);
 
 // Open service modal
 function openServiceModal(serviceName) {
-    const modal = document.getElementById(`modal-${serviceName}`);
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+    // For now, just show an alert with service info
+    const serviceInfo = {
+        'renhold': 'Kontakt oss for mer informasjon om våre renholdstjenester',
+        'spesialist': 'Kontakt oss for mer informasjon om våre spesialisttjenester',
+        'temporaere': 'Kontakt oss for mer informasjon om våre temporære tjenester',
+        'matter': 'Kontakt oss for mer informasjon om vår matteservice',
+        'forbruk': 'Kontakt oss for mer informasjon om forbruksvarer',
+        'baerekraft': 'Kontakt oss for mer informasjon om våre bærekraftstiltak'
+    };
+    
+    alert(serviceInfo[serviceName] || 'Kontakt oss på post@ekko.no for mer informasjon');
 }
 
 // Close service modal
