@@ -1709,9 +1709,10 @@ nav.scrolled .menu-toggle span {
 
 /* Footer */
 .footer {
-    background: #0a0a0a;
-    color: var(--bg-white);
+    background: var(--bg-light);
+    color: var(--text-dark);
     padding: var(--space-xl) 5%;
+    border-top: 1px solid var(--border-light);
 }
 
 .footer-content {
@@ -1727,10 +1728,12 @@ nav.scrolled .menu-toggle span {
 .footer-brand .logo {
     font-size: var(--text-3xl);
     margin-bottom: var(--space-xs);
+    color: var(--primary);
 }
 
 .footer-brand p {
-    opacity: 0.7;
+    color: var(--text-light);
+    font-size: var(--text-sm);
 }
 
 .footer-links {
@@ -1739,14 +1742,31 @@ nav.scrolled .menu-toggle span {
 }
 
 .footer-links a {
-    color: var(--bg-white);
+    color: var(--text-light);
     text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .footer-links a:hover {
-    opacity: 1;
+    color: var(--primary);
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 /* Animations */
