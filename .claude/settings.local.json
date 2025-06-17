@@ -20,7 +20,10 @@
       "Bash(find:*)",
       "Bash(rg:*)",
       "Bash(cat:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(/home/alexander/.ssh/setup_github_ssh.sh:*)",
+      "Bash(GIT_ASKPASS=echo git push https://xcmoose1@github.com/xcmoose1/ekko.git main)",
+      "WebFetch(domain:cerum.no)"
     ]
   },
   "enableAllProjectMcpServers": false

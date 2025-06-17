@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ekko-facility-services
+    env: static
+    buildCommand: "" # No build command needed for static HTML site
+    staticPublishPath: . # Serve files from root directory
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
