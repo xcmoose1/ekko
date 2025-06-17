@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp:*)",
+      "WebFetch(domain:novafs.no)",
+      "WebFetch(domain:insider.no)",
+      "WebFetch(domain:cares.no)",
+      "Bash(grep:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git config:*)",
+      "Bash(GIT_ASKPASS=echo git push -u origin main 2>&1)",
+      "Bash(ls:*)",
+      "Bash(ssh:*)",
+      "Bash(find:*)",
+      "Bash(rg:*)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": false
+}
